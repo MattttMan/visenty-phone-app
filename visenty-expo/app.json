@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Visenty Companion",
+    "slug": "visenty-companion",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.visenty.companion"
+    },
+    "android": {
+      "package": "com.visenty.companion",
+      "adaptiveIcon": {
+        "backgroundColor": "#0A0A0A"
+      }
+    },
+    "plugins": [
+      "expo-av"
+    ]
+  }
+}
