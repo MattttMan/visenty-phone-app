@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, useNavigationContainerRef } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
@@ -10,6 +10,7 @@ import {
   EventFeedScreen,
   EventDetailScreen,
   SettingsScreen,
+  LiveCameraFeedScreen,
 } from '../screens';
 import { colors } from '../theme';
 
@@ -63,6 +64,7 @@ const MainTabs = () => {
 export const AppNavigator = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const navigationRef = useNavigationContainerRef();
 
   useEffect(() => {
     checkAuth();
@@ -71,7 +73,13 @@ export const AppNavigator = () => {
   const checkAuth = async () => {
     try {
       const auth = await AsyncStorage.getItem('isAuthenticated');
-      setIsAuthenticated(auth === 'true');
+      const authenticated = auth === 'true';
+      setIsAuthenticated(authenticated);
+      
+      // If not authenticated and we're on Main screen, navigate to Login
+      if (!authenticated && navigationRef.isReady()) {
+        navigationRef.navigate('Login');
+      }
     } catch (error) {
       console.error('Failed to check auth:', error);
     } finally {
@@ -89,6 +97,11 @@ export const AppNavigator = () => {
 
   return (
     <NavigationContainer
+      ref={navigationRef}
+      onReady={() => {
+        // Re-check auth when navigation is ready
+        checkAuth();
+      }}
       theme={{
         dark: true,
         colors: {
@@ -115,6 +128,14 @@ export const AppNavigator = () => {
           component={EventDetailScreen}
           options={{
             presentation: 'modal',
+          }}
+        />
+        <Stack.Screen
+          name="LiveCameraFeed"
+          component={LiveCameraFeedScreen}
+          options={{
+            presentation: 'card',
+            headerShown: false,
           }}
         />
       </Stack.Navigator>

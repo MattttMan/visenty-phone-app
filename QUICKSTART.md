@@ -85,3 +85,5 @@ Having issues? Check [SETUP.md](SETUP.md) troubleshooting section.
 
 🚀 You're ready to go! Start exploring the Visenty Companion app.
 
+
+

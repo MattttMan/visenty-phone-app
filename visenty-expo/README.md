@@ -171,3 +171,5 @@ The app is running and ready to test. Scan the QR code with your phone and start
 
 **Built for Visenty** - Ending retail theft through intelligence
 
+
+

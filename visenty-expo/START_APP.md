@@ -73,3 +73,5 @@ npx expo start --tunnel
 
 **That's it!** Open your terminal, run the command above, wait for the QR code, and scan it with your phone! 📱
 
+
+

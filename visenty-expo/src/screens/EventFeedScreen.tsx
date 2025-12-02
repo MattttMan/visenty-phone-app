@@ -145,6 +145,7 @@ export const EventFeedScreen: React.FC<EventFeedScreenProps> = ({ navigation }) 
         )}
         ListEmptyComponent={renderEmpty}
         contentContainerStyle={styles.listContent}
+        showsVerticalScrollIndicator={false}
         refreshControl={
           <RefreshControl
             refreshing={refreshing}
@@ -244,18 +245,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: spacing.xl,
-    paddingTop: spacing.xl,
+    paddingTop: spacing.xxl,
     paddingBottom: spacing.md,
+    minHeight: 44, // Match notification button height for consistent header height
     backgroundColor: colors.background,
     borderBottomWidth: 0.5,
     borderBottomColor: 'rgba(255, 255, 255, 0.05)',
     zIndex: 10,
   },
   logo: {
-    fontSize: 18,
+    fontSize: 15,
     color: colors.primary,
-    fontWeight: '300',
-    letterSpacing: 4,
+    fontWeight: '400',
+    letterSpacing: 2,
   },
   notificationButton: {
     width: 44,

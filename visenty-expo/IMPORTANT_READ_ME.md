@@ -110,3 +110,5 @@ Since you're on a Mac, this is the **easiest option**:
 
 **The server is currently rebuilding the cache. This will take about 1-2 minutes. Once you see the QR code, choose your option above!**
 
+
+

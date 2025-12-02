@@ -274,3 +274,5 @@ Valid token
 
 **This visual flow shows how all pieces of the app work together to create a seamless experience for monitoring retail security events.**
 
+
+

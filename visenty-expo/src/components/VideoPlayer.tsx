@@ -119,7 +119,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
               <Image source={{ uri: youtubeThumbnail }} style={styles.thumbnailImage} />
             ) : (
               <View style={styles.youtubePlaceholder}>
-                <Ionicons name="logo-youtube" size={48} color="#FF0000" />
+                <Ionicons name="logo-youtube" size={48} color={colors.accent} />
               </View>
             )}
             <View style={styles.youtubePlayOverlay}>

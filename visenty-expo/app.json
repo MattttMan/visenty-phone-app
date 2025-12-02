@@ -19,7 +19,13 @@
       }
     },
     "plugins": [
-      "expo-av"
+      "expo-av",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Visenty to access your camera to scan QR codes."
+        }
+      ]
     ]
   }
 }

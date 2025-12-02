@@ -213,11 +213,11 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
   summary: {
-    fontSize: 18,
+    fontSize: 15,
     color: colors.text,
     fontWeight: '400',
     marginBottom: spacing.sm,
-    lineHeight: 24,
+    lineHeight: 20,
     letterSpacing: 0.3,
   },
   metaContainer: {

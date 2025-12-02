@@ -63,3 +63,5 @@ class ViewedEventsService {
 
 export default new ViewedEventsService();
 
+
+

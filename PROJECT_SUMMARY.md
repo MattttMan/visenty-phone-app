@@ -348,3 +348,5 @@ The app includes:
 **Built with ❤️ for Visenty**  
 *Ending retail theft through intelligence*
 
+
+

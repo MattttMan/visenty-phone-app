@@ -9,3 +9,5 @@ export const mockStores: Store[] = [
   { id: '3', name: 'Store #22 - Eastside', address: '789 Elm St' },
 ];
 
+
+
